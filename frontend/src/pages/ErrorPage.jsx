@@ -1,5 +1,7 @@
 export default function ErrorPage() {
     return (
-        <p className={"error"} >oopsie, something went wrong</p>
+        <div className={"error-page"}>
+            <p className={"error"} >Hark! A Misadventure Hath Befallen Thee</p>
+        </div>
     )
 }

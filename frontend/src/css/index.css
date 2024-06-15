@@ -14,8 +14,8 @@ body,
 /** ERROR PAGE **/
 /****************/
 
-.error {
-    color: white;
+.error-page {
+    color: rgb(160, 160, 160);
 }
 
 /***************/
@@ -161,7 +161,9 @@ body,
     justify-content: center;
 }
 
-.about-me ul {
+.about-me .arrows {
+    cursor: default;
+    user-select: none;
     display: flex;
     list-style-type: none;
     flex: 1;
@@ -175,21 +177,88 @@ body,
 }
 
 .class-container {
-    width: 80%; /* 80% of the viewport width */
-    height: 80%; /* 80% of the viewport height */
-    display: flex; /* Flexbox layout */
-    flex-wrap: wrap; /* Wrap images to the next line if necessary */
-    justify-content: space-evenly; /* Space out images horizontally */
-    align-items: center; /* Center images vertically */
-    border: 1px solid rgb(128, 128, 128); /* Optional: Add a border to see the container */
-
-
+    width: 80%;
+    /* 80% of the viewport width */
+    height: 80%;
+    /* 80% of the viewport height */
+    display: flex;
+    /* Flexbox layout */
+    flex-wrap: wrap;
+    /* Wrap images to the next line if necessary */
+    justify-content: space-evenly;
+    /* Space out images horizontally */
+    align-items: center;
+    /* Center images vertically */
+    border: 1px solid rgb(128, 128, 128);
+    /* Optional: Add a border to see the container */
 }
 
-.class-selection {
-    border: 1px solid rgb(128, 128, 128);
-    flex: 1; /* Allow images to grow and shrink as needed */
+.class-component {
+    flex: 1;
     height: 100%;
     width: 33%;
-    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    position: relative;
+    display: inline-block;
+}
+
+.class-component:nth-child(2) {
+    border-left: 1px solid rgb(128, 128, 128);
+    border-right: 1px solid rgb(128, 128, 128);
+}
+
+.class-image {
+    cursor: pointer;
+    flex: 1;
+    /* Allow images to grow and shrink as needed */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* Cover the area while maintaining aspect ratio */
+}
+
+.class-image.choosen {
+    opacity: 1;
+}
+
+.class-image.unchoosen {
+    opacity: 0.25;
+}
+
+.context-image {
+    top: calc(8px + 1vw);
+    left: calc(8px + 1vw);
+    height: calc(8px + 2vw);
+    position: absolute;
+    z-index: 9;
+}
+
+.context-box {
+    text-align: center;
+    user-select: none;
+    cursor: default;
+    top: calc(16px + 2vw);
+    display: none;
+    font-size: calc(8px + 1vw);
+    color: rgb(240, 240, 240);
+    position: absolute;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.context-container:hover .context-box {
+    display: block;
+}
+
+.class-title {
+    font-size: calc(8px + 2vw);
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(3px + 2vw);
+    user-select: none;
+    position: absolute;
+    color: rgb(160, 160, 160);
+    z-index: 9;
+    white-space: nowrap;
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
 }

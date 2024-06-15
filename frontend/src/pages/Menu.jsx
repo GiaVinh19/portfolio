@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import MenuList from '../components/MenuList';
+// import React, { useState } from 'react';
+import NavButton from '../components/NavButton';
+import React, { useContext } from 'react';
+import Context from '../Context';
 
 export default function Menu() {
 
-    const [menuOpen, setMenuOpen] = useState(false);
+    const { menuOpen, setMenuOpen } = useContext(Context);
 
     function playAudio(audioFile) {
         const audio = new Audio(audioFile)
@@ -23,13 +25,13 @@ export default function Menu() {
                 </ul>
                 <img className={"menu-title"} src="menu-title.png" />
                 <div className={`menu-start ${menuOpen ? 'open' : 'close'}`}>
-                    <p onClick={() => openMenuSelect()}>Click to Start</p>
+                    <p onClick={() => openMenuSelect()}>Click Here to Start</p>
                 </div>
                 <ul className={`menu-list ${menuOpen ? 'open' : 'close'}`}>
-                    <MenuList link={"about-me"} titleName={"About Me"}></MenuList>
-                    <MenuList titleName={"Load Profile"}></MenuList>
-                    <MenuList titleName={"Option"}></MenuList>
-                    <MenuList titleName={"Credit"}></MenuList>
+                    <NavButton link={"about-me"} titleName={"About Me"}></NavButton>
+                    <NavButton titleName={"Load Profile"}></NavButton>
+                    <NavButton titleName={"Option"}></NavButton>
+                    <NavButton titleName={"Credit"}></NavButton>
                 </ul>
             </div>
         </>
