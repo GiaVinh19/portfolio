@@ -4,9 +4,22 @@ const Context = createContext();
 
 export const ContextProvider = ({ children }) => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [musicVolume, setMusicVolume] = useState(0.2);
+    const [sfxVolume, setSfxVolume] = useState(0.5);
+    const [musicFile, setMusicFile ] = useState("Dark-Souls.wav");
+    const [playMusic, setPlayMusic] = useState(() => () => { });
+
+    const contextValue = {
+        menu: { menuOpen, setMenuOpen },
+        audio: 
+            {musicVolume, setMusicVolume, 
+            sfxVolume, setSfxVolume, 
+            playMusic, setPlayMusic,
+            musicFile, setMusicFile }
+    };
 
     return (
-        <Context.Provider value={{ menuOpen, setMenuOpen }}>
+        <Context.Provider value={contextValue}>
             {children}
         </Context.Provider>
     );

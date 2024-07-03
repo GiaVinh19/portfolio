@@ -1,7 +1,10 @@
 import Menu from "./pages/Menu";
 import AboutMe from "./pages/AboutMe";
 import ErrorPage from "./pages/ErrorPage";
-import CharacterSheet from "./pages/CharacterSheet";
+import Options from "./pages/Options";
+import Vindicator from "./pages/Vindicator";
+import Venator from "./pages/Venator";
+import Visionary from "./pages/Visionary";
 
 const routes = [
     {
@@ -13,8 +16,20 @@ const routes = [
         element: <AboutMe></AboutMe>
     },
     {
-        path: "character-sheet",
-        element: <CharacterSheet></CharacterSheet>
+        path: "about-me/Vindicator",
+        element: <Vindicator></Vindicator>
+    },
+    {
+        path: "about-me/Venator",
+        element: <Venator></Venator>
+    },
+    {
+        path: "about-me/Visionary",
+        element: <Visionary></Visionary>
+    },
+    {
+        path: "options",
+        element: <Options></Options>
     },
     {
         path: "*",

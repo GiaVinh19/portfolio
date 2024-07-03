@@ -4,16 +4,12 @@ import React, { useContext } from 'react';
 import Context from '../Context';
 
 export default function Menu() {
-
-    const { menuOpen, setMenuOpen } = useContext(Context);
-
-    function playAudio(audioFile) {
-        const audio = new Audio(audioFile)
-        audio.play()
-    }
+    const { menu, audio } = useContext(Context);
+    const { menuOpen, setMenuOpen } = menu;
+    const { playMusic } = audio;
 
     function openMenuSelect() {
-        playAudio("/select-confirm.wav");
+        playMusic();
         setMenuOpen(!menuOpen);
     };
 
@@ -30,7 +26,7 @@ export default function Menu() {
                 <ul className={`menu-list ${menuOpen ? 'open' : 'close'}`}>
                     <NavButton link={"about-me"} titleName={"About Me"}></NavButton>
                     <NavButton titleName={"Load Profile"}></NavButton>
-                    <NavButton titleName={"Option"}></NavButton>
+                    <NavButton link={"options"} titleName={"Option"}></NavButton>
                     <NavButton titleName={"Credit"}></NavButton>
                 </ul>
             </div>

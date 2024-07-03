@@ -52,8 +52,9 @@ export default function AboutMe() {
             </div>
 
             <ul className={"arrows"}>
-                <NavButton titleName={"Main Menu"} link={"/"}></NavButton>
-                <NavButton titleName={"Character Sheet"} link={"/character-sheet"}></NavButton>
+                <NavButton titleName={"◀ Main Menu"} link={"/"}></NavButton>
+                <div></div>
+                <NavButton titleName={"Character Sheet ▶"} link={chosenClass}></NavButton>
             </ul>
         </div>
     )
