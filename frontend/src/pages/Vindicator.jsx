@@ -1,7 +1,7 @@
-export default function Vindicator({}) {
+import CharacterSheet from "../components/CharacterSheet";
+
+export default function Vindicator() {
     return (
-        <div>
-            hello
-        </div>
+        <CharacterSheet heroClass={"Vindicator"}></CharacterSheet>
     )
 }

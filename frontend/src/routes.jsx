@@ -12,23 +12,23 @@ const routes = [
         element: <Menu></Menu>
     },
     {
-        path: "about-me",
+        path: "/about-me",
         element: <AboutMe></AboutMe>
     },
     {
-        path: "about-me/Vindicator",
+        path: "/about-me/Vindicator",
         element: <Vindicator></Vindicator>
     },
     {
-        path: "about-me/Venator",
+        path: "/about-me/Venator",
         element: <Venator></Venator>
     },
     {
-        path: "about-me/Visionary",
+        path: "/about-me/Visionary",
         element: <Visionary></Visionary>
     },
     {
-        path: "options",
+        path: "/options",
         element: <Options></Options>
     },
     {

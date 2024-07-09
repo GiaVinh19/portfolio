@@ -18,7 +18,7 @@ export default function Options() {
     }
 
     function playSoundOnChange() {
-        const audio = new Audio("select-confirm.wav");
+        const audio = new Audio("/audio/sfx/select-confirm.mp3");
         audio.volume = sfxVolume;
         audio.play();
     }

@@ -23,9 +23,9 @@ export default function NavButton({ titleName, link }) {
         };
     }, []);
 
-    function playSelectAudio(audioFile, audioVolume) {
+    function playSelectAudio(audioFile, sfxVolume) {
         const audio = new Audio(audioFile)
-        audio.volume = audioVolume
+        audio.volume = sfxVolume
         audio.play()
     }
 
@@ -33,8 +33,8 @@ export default function NavButton({ titleName, link }) {
         <NavLink
             className={"nav-link"}
             to={link}
-            onClick={() => playSelectAudio('/select-confirm.wav', sfxVolume)}
-            onMouseEnter={!isTouchDevice ? () => playSelectAudio('/select-hover.wav', sfxVolume) : null}>
+            onClick={() => playSelectAudio('/audio/sfx/select-confirm.mp3', sfxVolume)}
+            onMouseEnter={!isTouchDevice ? () => playSelectAudio('/audio/sfx/select-hover.mp3', sfxVolume) : null}>
             {titleName}
         </NavLink>
     )

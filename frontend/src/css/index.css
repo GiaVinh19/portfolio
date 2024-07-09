@@ -7,6 +7,7 @@
 html,
 body,
 #root {
+    color: rgb(240, 240, 240);
     background-color: black;
     overflow: hidden;
     margin: 0;
@@ -205,7 +206,7 @@ body,
 .about-me .select-class {
     color: rgb(240, 240, 240);
     list-style: none;
-    font-size: calc(8px + 1vw);
+    font-size: calc(12px + 1vw);
     justify-content: center;
     display: flex;
     align-items: center;
@@ -500,7 +501,7 @@ body,
 }
 
 input[type="range"] { /* slider */
-    -webkit-appearance: none;
+    appearance: none;
     height: 4px; /* Set the height of the track */
     transition: 0.5s;
     background-color: rgb(240, 240, 240);
@@ -523,4 +524,110 @@ input[type="range"]::-webkit-slider-thumb {
     background: rgb(255, 192, 96); /* Set the color of the thumb */
     cursor: pointer; /* Change cursor to pointer */
     border-radius: 50%; /* Make the thumb round */
+}
+
+/*********************/
+/** CHARACTER SHEET **/
+/*********************/
+
+.character-sheet {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(160, 160, 160);
+}
+
+.character-sheet span, .character-return {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.character-sheet span {
+    color: rgb(240, 240, 240);
+    font-size: calc(12px + 1vw);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+    cursor: default;
+}
+
+.character-return {
+    cursor: default;
+    user-select: none;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    font-size: calc(8px + 1vw);
+    color: rgb(128, 128, 128);
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.character-return .nav-link {
+    color: inherit;
+    text-decoration: none;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+    padding: 0 calc(12px + 2vw);
+    background-color: transparent;
+    border-radius: 10%;
+    transition: 0.5s;
+}
+
+.character-return .nav-link:hover {
+    cursor: pointer;
+    background-color: rgba(255, 128, 0, 0.4);
+    border-radius: 100%;
+    box-shadow: 0 0 10px 10px rgb(255, 128, 0, 0.4);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    color: rgb(255, 192, 96);
+}
+
+.character-return .nav-link:active { 
+    background-color: rgba(255, 128, 0, 0.4);
+    border-radius: 100%;
+    box-shadow: 0 0 10px 10px rgb(255, 128, 0, 0.4);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    color: rgb(255, 192, 96);
+}
+
+.character-section {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+.character-info, .character-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }

@@ -12,9 +12,11 @@ export default function AboutMe() {
 
     const [chosenClass, setChosenClass] = useState("");
 
-    function onSetChosenClass(heroClass) {
+
+    function onSetChosenClass(heroClass, sfxVolume) {
         setChosenClass(heroClass)
-        const audio = new Audio(heroClass+".wav")
+        const audio = new Audio(`/audio/sfx/${heroClass}.mp3`)
+        audio.volume = sfxVolume
         audio.play()
     }
 
@@ -25,7 +27,7 @@ export default function AboutMe() {
     return (
         <div className={"about-me"}>
             <ul className={"select-class"}>
-                <li>Select Class</li>
+                <li>About Me</li>
             </ul>
 
             <div className={"class-container"}>

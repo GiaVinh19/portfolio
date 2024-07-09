@@ -19,7 +19,7 @@ export default function Menu() {
                 <ul className={"menu-info"}>
                     <li>App ver. 1.0</li>
                 </ul>
-                <img className={"menu-title"} src="menu-title.png" />
+                <img className={"menu-title"} src="/image/menu-title.png" />
                 <div className={`menu-start ${menuOpen ? 'open' : 'close'}`}>
                     <p onClick={() => openMenuSelect()}>Click Here to Start</p>
                 </div>

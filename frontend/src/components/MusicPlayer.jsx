@@ -27,7 +27,7 @@ export default function MusicPlayer() {
             audioRef.current.src = musicFile;
             audioRef.current.play().catch(error => {
                 if (error.name === 'NotAllowedError' || error.name === 'AbortError') {
-                    console.log("If thou dost encounter this error, 'tis forsooth because Google hath a distaste for music set to autoplay.");
+                    console.log("If thou dost encounter this error, 'tis verily for that Google doth harbor a distaste for music that playeth of its own accord.");
                 }
                 else {
                     console.log(error)
@@ -38,7 +38,7 @@ export default function MusicPlayer() {
 
     return (
         <audio ref={audioRef} loop>
-            <source src={musicFile} type={"audio/wav"} />
+            <source src={musicFile} type={"audio/mp3"} />
             Thy browser doth not lend its ear to the symphony of sound.
         </audio>
     );
