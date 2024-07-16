@@ -22,7 +22,7 @@ export default function ClassComponent({ heroClass, chosenClass, onSetChosenClas
             </span>
             <img
                 draggable={"false"}
-                className={`class-image ${chosenClass === heroClass ? 'choosen' : 'unchoosen'} `}
+                className={`class-image ${chosenClass === heroClass ? 'chosen' : 'unchosen'} `}
                 onClick={chosenClass === heroClass ? () => {} : () => onSetChosenClass(heroClass, sfxVolume)}
                 src={`/image/${heroClass}.png`}>
             </img>
