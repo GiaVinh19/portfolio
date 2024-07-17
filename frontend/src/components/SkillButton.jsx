@@ -1,7 +1,7 @@
 import Context from "../Context";
 import React, {useContext} from 'react';
 
-export default function Skill({ chosenSkill, skillNumber, onSetChosenSkill }) {
+export default function SkillButton({ chosenSkill, skillNumber, onSetChosenSkill }) {
 
     const { audio } = useContext(Context);
     const { sfxVolume } = audio;

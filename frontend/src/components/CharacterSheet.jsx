@@ -1,19 +1,19 @@
 import NavButton from "./NavButton"
-import Context from "../Context";
-import React, { useEffect, useState, useContext } from 'react';
-import Skill from "./Skill";
+import React, { useEffect, useState } from 'react';
+import SkillButton from "./SkillButton";
+import SkillText from "./SkillText";
 
 export default function CharacterSheet( { heroClass, skill01, skill02, skill03, skill04 } ) {
     
     const [chosenSkill, setChosenSkill] = useState("");
-    const { audio } = useContext(Context);
-    const { sfxVolume } = audio;
 
     function onSetChosenSkill(skill, sfxVolume) {
         setChosenSkill(skill);
+        if (skill != "") {
         const audio = new Audio(`/audio/sfx/${skill}.mp3`);
-        audio.volume = (sfxVolume - 0.2)
+        audio.volume = Math.max(sfxVolume - 0.2, 0)
         audio.play()
+        }
     }
 
     useEffect(() => {
@@ -33,13 +33,13 @@ export default function CharacterSheet( { heroClass, skill01, skill02, skill03, 
                     </div>
                     <div className={"character-info"}>
                         <div className={"skill-text"}>
-                            <span>insert skill text here</span>
+                            <SkillText skill={chosenSkill}></SkillText>
                         </div>
                         <div className={"skill-icon"}>
-                            <Skill skillNumber={skill01} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></Skill>
-                            <Skill skillNumber={skill02} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></Skill>
-                            <Skill skillNumber={skill03} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></Skill>
-                            <Skill skillNumber={skill04} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></Skill>
+                            <SkillButton skillNumber={skill01} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></SkillButton>
+                            <SkillButton skillNumber={skill02} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></SkillButton>
+                            <SkillButton skillNumber={skill03} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></SkillButton>
+                            <SkillButton skillNumber={skill04} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></SkillButton>
                         </div>
                     </div>
                 </div>
