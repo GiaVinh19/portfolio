@@ -650,6 +650,10 @@ input[type="range"]::-webkit-slider-thumb {
     flex-direction: column;
 }
 
+.skill-text, .skill-icon {
+    height: 50%;
+}
+
 .skill-text {
     display: flex;
     justify-content: center;

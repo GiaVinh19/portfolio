@@ -1,9 +1,8 @@
 import NavButton from "./NavButton"
 import React, { useEffect, useState } from 'react';
 import SkillButton from "./SkillButton";
-import SkillText from "./SkillText";
 
-export default function CharacterSheet( { heroClass, skill01, skill02, skill03, skill04 } ) {
+export default function CharacterSheet( { heroClass, skill01, skill02, skill03, skill04, skillText } ) {
     
     const [chosenSkill, setChosenSkill] = useState("");
 
@@ -33,7 +32,7 @@ export default function CharacterSheet( { heroClass, skill01, skill02, skill03, 
                     </div>
                     <div className={"character-info"}>
                         <div className={"skill-text"}>
-                            <SkillText skill={chosenSkill}></SkillText>
+                            <span>{skillText[chosenSkill]}</span>
                         </div>
                         <div className={"skill-icon"}>
                             <SkillButton skillNumber={skill01} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></SkillButton>
