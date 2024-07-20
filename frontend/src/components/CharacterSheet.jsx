@@ -27,7 +27,7 @@ export default function CharacterSheet( { heroClass, skill01, skill02, skill03, 
                         <img 
                             className={"character-portrait"}
                             draggable={"false"}
-                            src={`/image/${heroClass}${chosenSkill}.gif`}>
+                            src={`/image/${heroClass}/${chosenSkill}.gif`}>
                         </img>
                     </div>
                     <div className={"character-info"}>
