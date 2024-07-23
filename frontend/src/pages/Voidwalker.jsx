@@ -6,7 +6,7 @@ export default function Voidwalker({}) {
         "jouster-strike": "Jouster Strike (JS) - A knight's masterful technique to swiftly respond with intricate algorithms, executing commands with the speed and precision of a jousting blade.",
         "react": "React - Empowers Vindicator to protect his allies with lightning-fast responses, heroically overcoming any obstacle in their path.",
         "holy-text-of-mighty-lord" : "Holy Text of Mighty Lord (HTML) - Endowed with the Mighty Lord's sacred knowledge, this holy text blesses Vindicator and his allies the essential foundation for any digital crusade."
-    };
+    }
 
     return (
         <CharacterSheet 

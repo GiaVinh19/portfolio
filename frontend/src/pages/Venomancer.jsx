@@ -1,11 +1,12 @@
 import CharacterSheet from "../components/CharacterSheet";
 
-export default function Venator({}) {
+export default function Venomancer() {
     const skillText = {
-        "crusader-sacred-smite": "Crusader Sacred Smite (CSS) - Deploy stunning visual effects that captivate and mesmerize all who behold them, rendering adversaries awestruck.",
-        "jouster-strike": "Jouster Strike (JS) - A knight's masterful technique to swiftly respond with intricate algorithms, executing commands with the speed and precision of a jousting blade.",
-        "react": "React - Empowers Vindicator to protect his allies with lightning-fast responses, heroically overcoming any obstacle in their path.",
-        "holy-text-of-mighty-lord" : "Holy Text of Mighty Lord (HTML) - Endowed with the Mighty Lord's sacred knowledge, this holy text blesses Vindicator and his allies the essential foundation for any digital crusade."
+        "" : "The Backend of Vinh's Vanguard. As the mastermind of the operation, Venomancer delves in the shadow and secretly deals data per second with the specialization of Python, Flask, SQL-Alchemy, and CRUD.",
+        "python": "Python - Venomancer's trusty snake that provide the necessary poisons to concote the perfect brews for the perfect timing.",
+        "flask": "Flask - A vessel to hold the essential ingredients—akin to libraries, dependencies, and configurations of backend arsenal.",
+        "sql-alchemy": "SQLAlchemy allows the Venomancer to craft intricate queries and perform complex data manipulations with ease, transforming raw data into powerful insights. Much like an alchemist turns base materials into gold, SQLAlchemy enables the Venomancer to refine and harness data for optimal backend solutions.",
+        "crud" : "Craft, Render, Utilize, and Dissolve - Endowed with the Mighty Lord's sacred knowledge, this holy text blesses Vindicator and his allies the essential foundation for any digital crusade."
     };
 
     return (
