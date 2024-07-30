@@ -9,7 +9,7 @@ export default function CharacterSheet({ heroClass, skill01, skill02, skill03, s
     function onSetChosenSkill(skill, sfxVolume) {
         setChosenSkill(skill);
         if (skill != "") {
-            const audio = new Audio(`/audio/sfx/${skill}.mp3`);
+            const audio = new Audio(`/audio/sfx/${heroClass}/${skill}.mp3`);
             audio.volume = Math.max(sfxVolume - 0.2, 0)
             audio.play()
         }
@@ -39,10 +39,10 @@ export default function CharacterSheet({ heroClass, skill01, skill02, skill03, s
                         <span>{skillText[chosenSkill]}</span>
                     </div>
                     <div className={"skill-icon"}>
-                        <SkillButton skillNumber={skill01} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></SkillButton>
-                        <SkillButton skillNumber={skill02} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></SkillButton>
-                        <SkillButton skillNumber={skill03} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></SkillButton>
-                        <SkillButton skillNumber={skill04} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></SkillButton>
+                        <SkillButton heroClass={heroClass} skillNumber={skill01} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></SkillButton>
+                        <SkillButton heroClass={heroClass} skillNumber={skill02} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></SkillButton>
+                        <SkillButton heroClass={heroClass} skillNumber={skill03} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></SkillButton>
+                        <SkillButton heroClass={heroClass} skillNumber={skill04} chosenSkill={chosenSkill} onSetChosenSkill={onSetChosenSkill} ></SkillButton>
                     </div>
                 </div>
             </div>

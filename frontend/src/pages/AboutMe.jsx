@@ -15,7 +15,7 @@ export default function AboutMe() {
 
     function onSetChosenClass(heroClass, sfxVolume) {
         setChosenClass(heroClass);
-        const audio = new Audio(`/audio/sfx/${heroClass}.mp3`);
+        const audio = new Audio(`/audio/sfx/${heroClass}/${heroClass}.mp3`);
         audio.volume = sfxVolume;
         audio.play();
     }

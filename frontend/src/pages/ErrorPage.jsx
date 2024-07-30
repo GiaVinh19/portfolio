@@ -10,7 +10,7 @@ export default function ErrorPage() {
             <p>Kindle thy bonfire to journey homeward.</p>
             <p>May grace light thy path, and thou voyage free of mishap.</p>
             <NavLink className={"bonfire"} to="/">
-                <img src={"/image/bonfire.gif"} />
+                <img src={"/image/ErrorPage/bonfire.gif"} />
             </NavLink>
         </div>
     )

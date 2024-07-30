@@ -11,7 +11,7 @@ export default function ClassComponent({ heroClass, chosenClass, onSetChosenClas
             <div className={"context-container"}>
                 <img 
                     className={"context-image"}
-                    src = {"/image/context.png"}>
+                    src = {"/image/AboutMe/context.webp"}>
                 </img>
                 <div className={"context-box"}>
                     {`${classDescription[heroClass]}`}
@@ -24,7 +24,7 @@ export default function ClassComponent({ heroClass, chosenClass, onSetChosenClas
                 draggable={"false"}
                 className={`class-image ${chosenClass === heroClass ? 'chosen' : 'unchosen'} `}
                 onClick={chosenClass === heroClass ? () => {} : () => onSetChosenClass(heroClass, sfxVolume)}
-                src={`/image/${heroClass}.png`}>
+                src={`/image/AboutMe/${heroClass}.webp`}>
             </img>
         </div>
     )
