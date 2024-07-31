@@ -10,7 +10,7 @@ export default function CharacterSheet({ heroClass, skill01, skill02, skill03, s
         setChosenSkill(skill);
         if (skill != "") {
             const audio = new Audio(`/audio/sfx/${heroClass}/${skill}.mp3`);
-            audio.volume = Math.max(sfxVolume - 0.2, 0)
+            audio.volume = sfxVolume
             audio.play()
         }
     }

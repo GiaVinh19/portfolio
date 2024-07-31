@@ -357,7 +357,7 @@ body,
 }
 
 .context-box {
-    text-align: center;
+    text-align: justify;
     user-select: none;
     cursor: default;
     top: calc(16px + 2vw);
@@ -669,6 +669,7 @@ input[type="range"]::-webkit-slider-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: justify;
 }
 
 .skill-icon {
