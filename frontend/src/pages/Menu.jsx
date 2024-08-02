@@ -33,7 +33,7 @@ export default function Menu() {
                 </div>
                 <ul className={`menu-list ${menuOpen ? 'open' : 'close'}`}>
                     <NavButton link={"about-me"} titleName={"About Me"}></NavButton>
-                    <NavButton titleName={"Load Profile"}></NavButton>
+                    <NavButton link={"profiles"} titleName={"Profiles"}></NavButton>
                     <NavButton link={"options"} titleName={"Option"}></NavButton>
                     <NavButton titleName={"Credit"}></NavButton>
                 </ul>

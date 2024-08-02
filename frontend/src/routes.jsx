@@ -5,6 +5,7 @@ import Options from "./pages/Options";
 import Vindicator from "./pages/Vindicator";
 import Venomancer from "./pages/Venomancer";
 import Voidwalker from "./pages/Voidwalker";
+import Profiles from "./pages/Profiles";
 
 const routes = [
     {
@@ -26,6 +27,10 @@ const routes = [
     {
         path: "/about-me/Voidwalker",
         element: <Voidwalker></Voidwalker>
+    },
+    {
+        path: "/profiles",
+        element: <Profiles></Profiles>
     },
     {
         path: "/options",
