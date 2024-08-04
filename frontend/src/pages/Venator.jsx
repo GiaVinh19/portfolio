@@ -1,6 +1,6 @@
 import CharacterSheet from "../components/CharacterSheet";
 
-export default function Voidwalker({}) {
+export default function Venator({}) {
     const skillText = {
         "crusader-sacred-smite": "Crusader Sacred Smite (CSS) - Deploy stunning visual effects that captivate and mesmerize all who behold them, rendering adversaries awestruck.",
         "jouster-strike": "Jouster Strike (JS) - A knight's masterful technique to swiftly respond with intricate algorithms, executing commands with the speed and precision of a jousting blade.",
@@ -10,7 +10,7 @@ export default function Voidwalker({}) {
 
     return (
         <CharacterSheet 
-        heroClass={"Voidwalker"} 
+        heroClass={"Venator"} 
         skillText={skillText}
         skill01={"holy-text-of-mighty-lord"}
         skill02={"crusader-sacred-smite"}

@@ -6,9 +6,9 @@ export default function AboutMe() {
 
     const Frontend = "The Frontend of Vinh's Vanguard. As the initiator of the campaign, Vindicator plans and visualizes his victory through the mastery of HTML, CSS, JS, and React."
     const Backend = "The Backend of Vinh's Vanguard. As the mastermind of the operation, Venomancer delves in the shadow and secretly deals data per second with the specialization of Python, Flask, SQL-Alchemy, and CRUD"
-    const Support = "The Support of Vinh's Vanguard. A mysterious figure claims to wield the power of foresight, Voidwalker hold knowledges that is unknown to many. Krita - a brush that conceptualize the future into an abstract but yet comprehensible painting; Audacity - an eerie conch that allow the dead to vocalize into whispers; Godot - A magical crystal ball that bind all his visions into a simulation where the future becomes a reality"
+    const Support = "The Support of Vinh's Vanguard. A mysterious figure claims to wield the power of foresight, Venator hold knowledges that is unknown to many. Krita - a brush that conceptualize the future into an abstract but yet comprehensible painting; Audacity - an eerie conch that allow the dead to vocalize into whispers; Godot - A magical crystal ball that bind all his visions into a simulation where the future becomes a reality"
 
-    const classDescription = {"Vindicator" : Frontend, "Venomancer" : Backend, "Voidwalker" : Support};
+    const classDescription = {"Vindicator" : Frontend, "Venomancer" : Backend, "Venator" : Support};
 
     const [chosenClass, setChosenClass] = useState("");
 
@@ -46,7 +46,7 @@ export default function AboutMe() {
                 </ClassComponent>
 
                 <ClassComponent
-                    heroClass={"Voidwalker"}
+                    heroClass={"Venator"}
                     chosenClass={chosenClass}
                     onSetChosenClass={onSetChosenClass}
                     classDescription={classDescription}>

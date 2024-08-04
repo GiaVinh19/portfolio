@@ -4,7 +4,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Options from "./pages/Options";
 import Vindicator from "./pages/Vindicator";
 import Venomancer from "./pages/Venomancer";
-import Voidwalker from "./pages/Voidwalker";
+import Venator from "./pages/Venator";
 import Profiles from "./pages/Profiles";
 
 const routes = [
@@ -25,8 +25,8 @@ const routes = [
         element: <Venomancer></Venomancer>
     },
     {
-        path: "/about-me/Voidwalker",
-        element: <Voidwalker></Voidwalker>
+        path: "/about-me/Venator",
+        element: <Venator></Venator>
     },
     {
         path: "/profiles",
