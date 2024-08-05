@@ -1,6 +1,7 @@
 import ClassComponent from "../components/ClassComponent"
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import NavButton from "../components/NavButton";
+import Context from "../Context";
 
 export default function AboutMe() {
 
@@ -12,12 +13,17 @@ export default function AboutMe() {
 
     const [chosenClass, setChosenClass] = useState("");
 
+    const { audio } = useContext(Context);
+    const {setVoiceFile} = audio;
 
-    function onSetChosenClass(heroClass, sfxVolume) {
+    function onSetChosenClass(heroClass, sfxVolume, setVoiceFile) {
+        setVoiceFile(`/audio/voice/${heroClass}.mp3`)
         setChosenClass(heroClass);
-        const audio = new Audio(`/audio/sfx/${heroClass}/${heroClass}.mp3`);
-        audio.volume = sfxVolume;
-        audio.play();
+
+        // const audio = new Audio(`/audio/sfx/${heroClass}/${heroClass}.mp3`);
+        // audio.volume = sfxVolume;
+        // audio.play();
+        
     }
 
     useEffect(() => {

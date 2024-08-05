@@ -7,7 +7,7 @@ import MusicSelector from "../components/MusicSelector";
 export default function Options() {
 
     const { audio } = useContext(Context);
-    const { setMusicFile ,musicVolume, setMusicVolume, sfxVolume, setSfxVolume } = audio;
+    const { setMusicFile ,musicVolume, setMusicVolume, sfxVolume, setSfxVolume, voiceVolume, setVoiceVolume, setVoiceFile } = audio;
 
     function onSetMusicVolume(event) {
         setMusicVolume(parseFloat(event.target.value));
@@ -15,6 +15,10 @@ export default function Options() {
 
     function onSetSfxVolume(event) {
         setSfxVolume(parseFloat(event.target.value));
+    }
+
+    function onSetVoiceVolume(event) {
+        setVoiceVolume(parseFloat(event.target.value));
     }
 
     function playSoundOnChange() {
@@ -27,6 +31,10 @@ export default function Options() {
         setMusicFile(event.target.value);
     }
 
+    function onSetVoiceFile(event) {
+        setVoiceFile(event.target.value);
+    }
+
     return (
         <div className={"options-menu"}>
             <ul className={"options-title"}>
@@ -36,6 +44,7 @@ export default function Options() {
                 <MusicSelector onChange={onSetMusicFile}></MusicSelector>
                 <Slider sliderType={"Music Volume"} initialVolume={musicVolume} value={musicVolume} onChange={onSetMusicVolume}></Slider>
                 <Slider sliderType={"SFX Volume"} value={sfxVolume} onChange={onSetSfxVolume} onChangeUpdate={playSoundOnChange}></Slider>
+                <Slider sliderType={"Voice Volume"} initialVolume={voiceVolume} value={voiceVolume} onChange={onSetVoiceVolume}></Slider>
             </ul>
             <ul className={"options-return"}>
                 <NavButton titleName={"◀ Main Menu"} link={"/"}></NavButton>
