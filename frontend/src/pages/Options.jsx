@@ -21,9 +21,15 @@ export default function Options() {
         setVoiceVolume(parseFloat(event.target.value));
     }
 
-    function playSoundOnChange() {
-        const audio = new Audio("/audio/sfx/select-confirm.mp3");
+    function playSfxOnChange() {
+        const audio = new Audio("/audio/sfx/NavButton/select-confirm.mp3");
         audio.volume = sfxVolume;
+        audio.play();
+    }
+
+    function playVoiceOnChange() {
+        const audio = new Audio("/audio/voice/option.mp3");
+        audio.volume = voiceVolume;
         audio.play();
     }
 
@@ -43,8 +49,8 @@ export default function Options() {
             <ul className={"options-list"}>
                 <MusicSelector onChange={onSetMusicFile}></MusicSelector>
                 <Slider sliderType={"Music Volume"} initialVolume={musicVolume} value={musicVolume} onChange={onSetMusicVolume}></Slider>
-                <Slider sliderType={"SFX Volume"} value={sfxVolume} onChange={onSetSfxVolume} onChangeUpdate={playSoundOnChange}></Slider>
-                <Slider sliderType={"Voice Volume"} initialVolume={voiceVolume} value={voiceVolume} onChange={onSetVoiceVolume}></Slider>
+                <Slider sliderType={"SFX Volume"} value={sfxVolume} onChange={onSetSfxVolume} onChangeUpdate={playSfxOnChange}></Slider>
+                <Slider sliderType={"Voice Volume"} initialVolume={voiceVolume} value={voiceVolume} onChange={onSetVoiceVolume} onChangeUpdate={playVoiceOnChange}></Slider>
             </ul>
             <ul className={"options-return"}>
                 <NavButton titleName={"◀ Main Menu"} link={"/"}></NavButton>

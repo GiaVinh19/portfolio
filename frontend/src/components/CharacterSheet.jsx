@@ -16,7 +16,7 @@ export default function CharacterSheet({ heroClass, skill01, skill02, skill03, s
     }
 
     useEffect(() => {
-        console.log(chosenSkill);
+        // console.log(chosenSkill);
     }, [chosenSkill]); // This effect runs whenever chosenSkill changes
 
     return (

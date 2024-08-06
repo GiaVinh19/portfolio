@@ -23,11 +23,11 @@ export default function AboutMe() {
         // const audio = new Audio(`/audio/sfx/${heroClass}/${heroClass}.mp3`);
         // audio.volume = sfxVolume;
         // audio.play();
-        
+
     }
 
     useEffect(() => {
-        console.log(chosenClass);
+        // console.log(chosenClass);
     }, [chosenClass]); // This effect runs whenever chosenClass changes
 
     return (
