@@ -17,7 +17,8 @@ export default function AboutMe() {
     const {setVoiceFile} = audio;
 
     function onSetChosenClass(heroClass, sfxVolume, setVoiceFile) {
-        setVoiceFile(`/audio/voice/${heroClass}.mp3`)
+        const randomNum = Math.floor(Math.random() * 2);
+        setVoiceFile(`/audio/voice/AboutMe/${heroClass}${randomNum}.mp3`)
         setChosenClass(heroClass);
 
         // const audio = new Audio(`/audio/sfx/${heroClass}/${heroClass}.mp3`);

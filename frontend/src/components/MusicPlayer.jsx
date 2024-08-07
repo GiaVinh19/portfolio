@@ -27,7 +27,11 @@ export default function MusicPlayer() {
             audioRef.current.src = musicFile;
             audioRef.current.play().catch(error => {
                 if (error.name === 'NotAllowedError' || error.name === 'AbortError') {
-                    console.log("If thou dost encounter this error, 'tis verily for that Google doth harbor a distaste for music that playeth of its own accord.");
+                    // console.log("If thou dost encounter this error, 'tis verily for that Google doth harbor a distaste for music that playeth of its own accord.");
+                    return;
+                }
+                else if (error.message.includes('Failed to load because no supported source was found')) {
+                    return;
                 }
                 else {
                     console.log(error)

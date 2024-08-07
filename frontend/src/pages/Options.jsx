@@ -28,17 +28,11 @@ export default function Options() {
     }
 
     function playVoiceOnChange() {
-        const audio = new Audio("/audio/voice/option.mp3");
-        audio.volume = voiceVolume;
-        audio.play();
+        setVoiceFile(`/audio/voice/Options/options.mp3`);
     }
 
     function onSetMusicFile(event) {
         setMusicFile(event.target.value);
-    }
-
-    function onSetVoiceFile(event) {
-        setVoiceFile(event.target.value);
     }
 
     return (

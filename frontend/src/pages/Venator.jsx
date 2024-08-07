@@ -2,20 +2,20 @@ import CharacterSheet from "../components/CharacterSheet";
 
 export default function Venator({}) {
     const skillText = {
-        "crusader-sacred-smite": "Crusader Sacred Smite (CSS) - Deploy stunning visual effects that captivate and mesmerize all who behold them, rendering adversaries awestruck.",
-        "jouster-strike": "Jouster Strike (JS) - A knight's masterful technique to swiftly respond with intricate algorithms, executing commands with the speed and precision of a jousting blade.",
-        "react": "React - Empowers Vindicator to protect his allies with lightning-fast responses, heroically overcoming any obstacle in their path.",
-        "holy-text-of-mighty-lord" : "Holy Text of Mighty Lord (HTML) - Endowed with the Mighty Lord's sacred knowledge, this holy text blesses Vindicator and his allies the essential foundation for any digital crusade."
+        "krita": "Krita — An artisan tool to illustrate one's goal. But in the hand of Venator, it becomes a branding mark for his prey.",
+        "capcut": "Capcut — Venator's infamous hook that capture his victim's last moment before masterfully stroke his cut.",
+        "godot": "Godot - A strategem that acts as a simulator for Venator, a mean to foreseen the endless outcomes of a hunter's wicked creativity.",
+        "audacity" : "Audacity - Venator's source of strength to overcome any big games."
     }
 
     return (
         <CharacterSheet 
         heroClass={"Venator"} 
         skillText={skillText}
-        skill01={"holy-text-of-mighty-lord"}
-        skill02={"crusader-sacred-smite"}
-        skill03={"jouster-strike"}
-        skill04={"react"}
+        skill01={"krita"}
+        skill02={"capcut"}
+        skill03={"audacity"}
+        skill04={"godot"}
         >
         </CharacterSheet>
     )
