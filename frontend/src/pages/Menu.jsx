@@ -17,7 +17,12 @@ export default function Menu() {
         const musicTitleWithExtension = musicFile.split('/').pop();
         const musicTitleWithoutExtension = musicTitleWithExtension.split('.').shift();
         const musicTitle = musicTitleWithoutExtension.replace('-',' ');
-        return musicTitle;
+        if (musicTitle != "") { 
+            return "Music - " + musicTitle;
+        }
+        else {
+            return
+        }
     }
 
     return (
@@ -25,7 +30,7 @@ export default function Menu() {
             <div className={"main-menu"}>
                 <ul className={`menu-info ${menuOpen ? 'open' : 'close'}`}>
                     <li>App ver. 1.0</li>
-                    <li>{"Music - " + getMusicTitle(musicFile)}</li>
+                    <li>{getMusicTitle(musicFile)}</li>
                 </ul>
                 <img className={"menu-title"} src="/image/Menu/menu-title.webp" />
                 <div className={`menu-start ${menuOpen ? 'open' : 'close'}`}>

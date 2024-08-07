@@ -647,6 +647,12 @@ input[type="range"]::-webkit-slider-thumb {
     align-items: center;
 }
 
+.skill-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .character-info {
     flex: 2
 }
