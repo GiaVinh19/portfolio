@@ -6,11 +6,14 @@ import Context from '../Context';
 export default function Menu() {
     const { menu, audio } = useContext(Context);
     const { menuOpen, setMenuOpen } = menu;
-    const { playMusic, musicFile } = audio;
+    const { musicFile, setMusicFile, sfxVolume } = audio;
 
     function openMenuSelect() {
-        playMusic();
+        setMusicFile("/audio/music/Dark-Souls.mp3")
         setMenuOpen(!menuOpen);
+        const audio = new Audio("/audio/sfx/Menu/open-menu.mp3");
+        audio.volume = sfxVolume;
+        audio.play();
     };
 
     function getMusicTitle(musicFile) {
