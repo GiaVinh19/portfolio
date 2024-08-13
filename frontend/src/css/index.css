@@ -806,7 +806,15 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .map-section .map {
+    -webkit-user-drag: none;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: fill;
+}
+
+.link-button {
+    position: absolute;
+    z-index: 1;
+    width: calc(16px + 1vw);
+    height: calc(16px + 1vw);
 }

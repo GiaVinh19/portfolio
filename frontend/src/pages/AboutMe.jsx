@@ -6,10 +6,10 @@ import Context from "../Context";
 export default function AboutMe() {
 
     const Frontend = "The Frontend of Vinh's Vanguard. As the initiator of the campaign, Vindicator plans and visualizes his victory through the mastery of HTML, CSS, JS, and React."
-    const Backend = "The Backend of Vinh's Vanguard. As the mastermind of the operation, Venomancer lurks in the shadow and secretly deals data per session with the specialization of Python, Flask, SQL-Alchemy, and CRUD"
-    const Support = "The Support of Vinh's Vanguard. A mysterious figure claims to wield the power of foresight, Venator hold knowledges that is unknown to many. Krita - a brush that conceptualize the future into an abstract but yet comprehensible painting; Audacity - an eerie conch that allow the dead to vocalize into whispers; Godot - A magical crystal ball that bind all his visions into a simulation where the future becomes a reality"
+    const Backend = "The Backend of Vinh's Vanguard. As the mastermind of the operation, Venomancer lurks in the shadow and secretly deals data over time with the specialization of Python, Flask, SQL-Alchemy, and CRUD."
+    const Generalist = "The Generalist of Vinh's Vanguard. As the artisan of all trades, Venator adapts and overcomes challenges by studying the human psyche and versatility in Audacity, Godot, Krita, and Capcut."
 
-    const classDescription = {"Vindicator" : Frontend, "Venomancer" : Backend, "Venator" : Support};
+    const classDescription = {"Vindicator" : Frontend, "Venomancer" : Backend, "Venator" : Generalist};
 
     const [chosenClass, setChosenClass] = useState("");
 
