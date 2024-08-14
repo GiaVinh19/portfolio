@@ -1,5 +1,5 @@
 import ClassComponent from "../components/ClassComponent"
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useState } from 'react';
 import NavButton from "../components/NavButton";
 
 export default function AboutMe() {
@@ -12,14 +12,14 @@ export default function AboutMe() {
 
     const [chosenClass, setChosenClass] = useState("");
 
-    function onSetChosenClass(heroClass, sfxVolume, setVoiceFile) {
+    function onSetChosenClass(heroClass, setVoiceFile) {
         setVoiceFile(`/audio/voice/AboutMe/${heroClass}.mp3`)
         setChosenClass(heroClass);
     }
 
-    useEffect(() => {
-        // console.log(chosenClass);
-    }, [chosenClass]); // This effect runs whenever chosenClass changes
+    // useEffect(() => {
+    //     // console.log(chosenClass);
+    // }, [chosenClass]); // This effect runs whenever chosenClass changes
 
     return (
         <div className={"about-me"}>

@@ -22,10 +22,10 @@ export default function Venator({}) {
         heroClass={"Venator"} 
         skillName={skillName}
         skillText={skillText}
-        skill01={"krita"}
-        skill02={"capcut"}
-        skill03={"audacity"}
-        skill04={"godot"}
+        skill01={"audacity"}
+        skill02={"godot"}
+        skill03={"krita"}
+        skill04={"capcut"}
         >
         </CharacterSheet>
     )

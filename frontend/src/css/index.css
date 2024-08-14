@@ -818,8 +818,9 @@ input[type="range"]::-webkit-slider-thumb {
     cursor: pointer;
     transition: 1s;
     transform-origin: center;
-    width: calc(16px + 1vw);
-    height: calc(16px + 1vw);
+    width: calc(16px + 2vw);
+    height: calc(16px + 2vw);
+    object-fit: contain;
 }
 
 .link-button.chosen {

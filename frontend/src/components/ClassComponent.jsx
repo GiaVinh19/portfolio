@@ -4,7 +4,7 @@ import React, { useContext } from 'react';
 export default function ClassComponent({ heroClass, chosenClass, onSetChosenClass, classDescription }) {
 
     const { audio } = useContext(Context);
-    const { sfxVolume, setVoiceFile } = audio;
+    const { setVoiceFile } = audio;
 
     return (
         <div className={"class-component"}>
@@ -23,7 +23,7 @@ export default function ClassComponent({ heroClass, chosenClass, onSetChosenClas
             <img
                 draggable={"false"}
                 className={`class-image ${chosenClass === heroClass ? 'chosen' : 'unchosen'} `}
-                onClick={chosenClass === heroClass ? () => {} : () => onSetChosenClass(heroClass, sfxVolume, setVoiceFile)}
+                onClick={chosenClass === heroClass ? () => {} : () => onSetChosenClass(heroClass, setVoiceFile)}
                 src={`/image/AboutMe/${heroClass}.webp`}>
             </img>
         </div>
