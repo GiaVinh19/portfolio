@@ -6,6 +6,11 @@ export default function Profiles() {
 
     const [chosenProfile, setChosenProfile] = useState("");
 
+    function onSetChosenProfile(profile, setVoiceFile) {
+        setVoiceFile(`/audio/voice/Profiles/${profile}.mp3`)
+        setChosenProfile(profile);
+    }
+
     return (
         <div className={"profiles"}>
             <span> Profiles </span>
@@ -14,10 +19,10 @@ export default function Profiles() {
                     className={"map"}
                     src={"/image/Profiles/map.webp"}>
                 </img>
-                <LinkButton imageFile={"itch"} top={"65%"} left={"58%"}></LinkButton>
-                <LinkButton imageFile={"linkedin"} top={"50%"} left={"67.5%"}></LinkButton>
-                <LinkButton imageFile={"medium"} top = {"46%"} left={"46.5%"}></LinkButton>
-                <LinkButton imageFile={"github"} top = {"31%"} left={"58.5%"}></LinkButton>
+                <LinkButton profile={"itch"} chosenProfile={chosenProfile} top={"65%"} left={"58%"} onSetChosenProfile={onSetChosenProfile}></LinkButton>
+                <LinkButton profile={"linkedin"} chosenProfile={chosenProfile} top={"78%"} left={"65%"} onSetChosenProfile={onSetChosenProfile}></LinkButton>
+                <LinkButton profile={"medium"} chosenProfile={chosenProfile} top = {"46%"} left={"46.5%"} onSetChosenProfile={onSetChosenProfile}></LinkButton>
+                <LinkButton profile={"github"} chosenProfile={chosenProfile} top = {"31%"} left={"58.5%"} onSetChosenProfile={onSetChosenProfile}></LinkButton>
             </div>
             <ul className={"profiles-return"}>
                 <NavButton titleName={"◀ Main Menu"} link={"/"}></NavButton>
