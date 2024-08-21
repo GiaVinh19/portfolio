@@ -696,6 +696,10 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .skill-icon img {
+    user-select: none;
+    -webkit-user-select: none; /* For Safari */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For Internet Explorer and Edge */
     width: 20%;
     padding: 2.5%;
     transition: 0.5s;
