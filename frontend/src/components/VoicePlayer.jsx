@@ -27,9 +27,9 @@ export default function VoicePlayer() {
 
     }
 
-    useEffect(() => {
-        console.log(`voiceFile has changed to: ${voiceFile}`);
-    }, [voiceFile]);
+    // useEffect(() => {
+    //     console.log(`voiceFile has changed to: ${voiceFile}`);
+    // }, [voiceFile]);
 
     useEffect(() => {
         if (audioRef.current) {
