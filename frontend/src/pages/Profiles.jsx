@@ -15,7 +15,7 @@ export default function Profiles() {
         "Github" : "https://github.com/GiaVinh19",
         "Linkedin" : "https://www.linkedin.com/in/gia-vinh-nguyen/",
         "Itch.io" : "https://spin2vin.itch.io/",
-        "Resume" : "",
+        "Resume" : "https://docs.google.com/document/d/1Edm8DT03SRHqtSb1dXNGlOtJ_BbeM7PERAY3pMrmk-4",
         "Medium" : "https://medium.com/@vinh.g.nguyen19"
     }
 

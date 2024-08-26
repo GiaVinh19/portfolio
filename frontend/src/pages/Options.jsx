@@ -28,7 +28,7 @@ export default function Options() {
     }
 
     function playVoiceOnChange() {
-        setVoiceFile(`/audio/voice/Options/options.mp3`);
+        setVoiceFile(`/audio/voice/Options/Options.mp3`);
     }
 
     function onSetMusicFile(event) {
